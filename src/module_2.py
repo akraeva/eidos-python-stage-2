@@ -133,3 +133,63 @@ def m_2_4_4(num):
 
 
 # print(m_2_4_4(int(input())))
+
+
+# 2.5 Итерация по вложенным спискам | for i in [1, 2, 3]
+
+# === Задача 1 ===
+"""
+    Дан вложенный список. Вычислите и выведите на экран
+    минимальное и максимальное число
+    """
+
+
+def m_2_5_1(data):
+    nums = [num for line in data for num in line]
+    return f"{min(nums)}\n{max(nums)}"
+
+
+# print(m_2_5_1(nested_list))
+
+
+# === Задача 2 ===
+"""
+    Дан список. Выведите на экран список только из четных чисел данного списка
+    """
+
+
+def m_2_5_2(data):
+    result = [num for line in data for num in line if num % 2 == 0]
+    return result
+
+
+# print(m_2_5_2(nested_list))
+
+
+# === Задача 3 ===
+"""
+    Дан список чисел. Выведите такой же список,
+    со всеми нечетными числами, замененными на 0
+    """
+
+
+def m_2_5_3(data):
+    result = [[num if num % 2 == 0 else 0 for num in line] for line in data]
+    return result
+
+
+# print(m_2_5_3(nested_list))
+
+
+# === Задача 4 ===
+"""
+    Дана матрица чисел. Составьте список состоящий из сумм каждой строки
+    """
+
+
+def m_2_5_4(data):
+    result = [sum(line) for line in data]
+    return result
+
+
+# print(m_2_5_4(matrix))

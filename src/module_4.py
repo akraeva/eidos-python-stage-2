@@ -120,3 +120,44 @@ def m_4_2_5(data: str):
 
 
 # print(m_4_2_5(input()))
+
+
+# 4.3 Итерация по множествам и использование функций
+
+
+# === Задача 1 ===
+"""
+    Дано множество numbers
+    Создайте новое множество, содержащее только числа, большие 50
+    Итоговое множество должно быть преобразовано в отсортированный
+    список и выведено.
+    """
+
+
+def m_4_3_1(nums: set):
+    result = {num for num in nums if num > 50}
+    return sorted(result)
+
+
+# print(m_4_3_1(numbers))
+
+
+# === Задача 2 ===
+"""
+    Дано множество numbers
+        1.Создайте новое множество even_numbers,
+          содрежащее только чётные числа из numbers.
+        2.Удаляет из исходного множества numbers все числа, кратные 5
+        3.Выводит два преобразованных множества в отсортированные
+          списки (сначала numbers, после even numbers)
+    """
+
+
+def m_4_3_2(nums: set):
+    even_numbers = {num for num in nums if num % 2 == 0}
+    to_remove = {num for num in nums if num % 5 == 0}
+    nums -= to_remove
+    return f"{sorted(nums)}\n{sorted(even_numbers)}"
+
+
+# print(m_4_3_2(numbers))

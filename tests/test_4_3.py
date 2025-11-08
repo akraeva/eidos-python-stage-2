@@ -3,7 +3,9 @@
 # 4.3 Итерация по множествам и использование функций
 
 import pytest
-from src.module_4 import m_4_3_1, m_4_3_2
+from src.module_4 import m_4_3_1, m_4_3_2, m_4_3_0
+import io
+from contextlib import redirect_stdout
 
 # для запуска pytest -k "test_4_3_" -q -x --tb=short
 
@@ -85,3 +87,23 @@ def test_4_3_1(nums, expected):
 )
 def test_4_3_2(numbers, expected):
     assert m_4_3_2(numbers) == expected
+
+
+def test_4_3_0():
+    result = m_4_3_0()
+
+    # === Task 1: unique numbers ===
+    assert result[0] == {1, 2, 3, 4, 5}
+
+    # === Task 2: unique words count ===
+    assert result[1] == 4
+
+    # === Task 3: intersection of two sets ===
+    assert result[2] == {4, 5}
+
+    # === Task 4: union of student names ===
+    expected_students = {"Алексей", "Мария", "Иван", "Ольга", "Дмитрий", "Сергей"}
+    assert result[3] == expected_students
+
+    # === Task 5: divisible by 3 but not by 5 ===
+    assert result[4] == {21, 42}

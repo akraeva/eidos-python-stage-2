@@ -4,8 +4,6 @@
 
 import pytest
 from src.module_4 import m_4_3_1, m_4_3_2, m_4_3_0
-import io
-from contextlib import redirect_stdout
 
 # для запуска pytest -k "test_4_3_" -q -x --tb=short
 
@@ -87,6 +85,9 @@ def test_4_3_1(nums, expected):
 )
 def test_4_3_2(numbers, expected):
     assert m_4_3_2(numbers) == expected
+
+
+# === Тест для дополнительных задач ===
 
 
 def test_4_3_0():

@@ -169,3 +169,80 @@ def m_5_3_4(data: dict, queries=("banana", "pear")):
 
 
 # print(m_5_3_4(inventory))
+
+
+# 5.4 Словари, как значения других словарей. Вложенные словари
+
+
+# === Задача 1 Поиск максимального значения во вложенных словарях ===
+"""
+    Дан словарь: Найдите имя пользователя
+    с максимальным значением поля "score".
+    """
+
+
+def m_5_4_1(data: dict, field="score"):
+    max_data = max(data.values(), key=lambda user: user[field])
+    return max_data["name"]
+
+
+# print(m_5_4_1(data))
+
+
+# === Задача 2 ===
+"""
+    Даны два вложенных словаря: Объедините эти словари так, чтобы значения
+    пересекающихся ключей также были объединены. Если ключ повторяется,
+    берется значение из dict2.
+    """
+
+
+def m_5_4_2(dict1: dict, dict2: dict):
+    result = dict1.copy()
+    for key, value in dict2.items():
+        if key in result:
+            result[key].update(value)
+        else:
+            result[key] = value
+    return result
+
+
+# print(m_5_4_2(dict1, dict2))
+
+
+# === Задача 3 ===
+"""
+    Дан словарь: Напишите программу, которая вернет
+    список имен сотрудников из отдела "IT", чей возраст больше 25 лет.
+    """
+
+
+def m_5_4_3(data: dict, department="IT", age=25):
+    result = [
+        user["name"]
+        for user in data.values()
+        if user["department"] == department and user["age"] > age
+    ]
+    return result
+
+
+# print(m_5_4_3(employees))
+
+
+# === Задача 4 ===
+"""
+    Дан список словарей: Напишите программу, которая сгруппирует
+    продукты по категориям и вернет новый вложенный словарь.
+    """
+
+
+def m_5_4_4(data: dict):
+    result = {}
+    for product in data:
+        category = product["category"]
+        info = {"name": product["name"], "price": product["price"]}
+        result.setdefault(category, []).append(info)
+    return result
+
+
+# print(m_5_4_4(products))

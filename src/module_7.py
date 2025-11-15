@@ -17,4 +17,51 @@ def hello():
     print("Hello World!")
 
 
-m_5_1_1 = hello
+m_7_1_1 = hello
+
+
+# 7.2 Функции с параметрами | Прием значений извне
+
+
+# === Задача 1 ===
+"""
+    Создайте функцию show_local_variable(), которая внутри себя определяет
+    локальную переменную x = 10 и выводит её значение.
+    """
+
+
+def show_local_variable():
+    x = 10
+    print(x)
+
+
+m_7_2_1 = show_local_variable
+
+
+# === Задача 2 ===
+"""
+    Напишите функцию greet(name), которая принимает имя и выводит сообщение:
+    "Привет, [name]!"
+    """
+
+
+def greet(name):
+    greeting = f"Привет, {name}!"
+    print(greeting)
+
+
+m_7_2_2 = greet
+
+
+# === Задача 3 ===
+"""
+    Создайте функцию maximum(a, b), которая возвращает большее из двух чисел.
+    """
+
+
+def maximum(a, b):
+    result = a if a > b else b
+    print(result)
+
+
+m_7_2_3 = maximum

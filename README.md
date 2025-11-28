@@ -152,6 +152,7 @@ Eidos Academy, команда разработчиков и преподават
 - [Репозиторий с решениями курса по Python от Яндекса](https://github.com/akraeva/yandex-handbook-python)
 - [Репозиторий с решениями "Поколение Python: продвинутый уровень"](https://github.com/akraeva/python_generation_advanced)
 - [Репозиторий с решениями "Углублённый Python"](https://github.com/akraeva/python-deep-dive)
+- [Репозиторий с решениями "Python | Вторая ступень | Продвинутые концепции"](https://github.com/akraeva/eidos-python-stage-2.git)
 
 ---
 
